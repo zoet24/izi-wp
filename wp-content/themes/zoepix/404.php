@@ -1,17 +1,9 @@
-<?php
-    get_header();
-?>
+<?php get_header(); ?>
+<?php component('global/header') ?>
     
-	<article class="content px-3 py-5 p-md-5">
-		
-        <h1>Page Not Found</h1>
-        
-        <?php
-            get_search_form();
-        ?>
+<main class="">
+    Page Not Found
+</main>
 
-	</article>
-
-<?php
-	get_footer();
-?>
+<?php component('global/footer') ?>
+<?php get_footer(); ?>
