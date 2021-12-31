@@ -27,10 +27,9 @@ add_action('after_setup_theme', 'zoepix_theme_support');
 // Dynamically add in style sheets
 function zoepix_register_styles(){
 
-    $version = wp_get_theme()->get( 'Version' );
     // Add zoepix-bootstrap into the array box to show that zoepix-style is dependent on zoepix-bootstrap, so zoepix-bootstrap will load first
-    wp_enqueue_style('zoepix-css-style', get_template_directory_uri() . "/src/styles/style.css", array('zoepix-css-bootstrap'), $version, 'all');
-    wp_enqueue_style('zoepix-css-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('zoepix-css-style', get_template_directory_uri() . "/dist/css/style.css");
+    // wp_enqueue_style('zoepix-css-colours', get_template_directory_uri() . "/dist/css/colors.css", array(), $version, 'all');
     wp_enqueue_style('zoepix-css-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     
 }

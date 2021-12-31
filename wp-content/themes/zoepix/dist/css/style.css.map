@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;CAClB;;ACHD,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "../../src/styles/style.scss",
+        "../../src/styles/_components.scss",
+        "../../src/styles/components/buttons/_button.scss",
+        "../../src/styles/components/global/_footer.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
