@@ -1,2 +1,12 @@
+// Global
+@import "config";
+@import "mixins";
+
 // Components
+@import "blocks";
 @import "components";
+
+body {
+    margin: 0;
+    padding: 0;
+}

@@ -14,8 +14,15 @@ function zoepixGalleryPrimary() {
         Field::make( 'complex', 'gallery_images', __( 'Gallery Images' ) )
             ->set_layout( 'tabbed-horizontal' )
             ->add_fields( array(
-                Field::make( 'text', 'caption', __( 'Caption' ) ),
-                Field::make( 'image', 'image', __( 'Image' ) ),
+                Field::make( 'text', 'caption', __('Caption') ),
+                Field::make( 'image', 'image', __('Image') ),
+                Field::make( "multiselect", "image_size", "Image Size" )
+                    ->add_options( array(
+                        'regular' => 'Regular',
+                        'horizontal' => 'Horizontal',
+                        'vertical' => 'Vertical',
+                        'large' => 'Large',
+                    ) ),
             ) )
 	) )
     
@@ -34,13 +41,15 @@ function zoepixGalleryPrimary() {
 
         <section class="gallery-primary">
             <div class="gallery-primary__container">
-                <ul class="gallery-primary__image-tiles">
+                <div class="gallery-primary__image-tiles">
                     <?php foreach ($collections as $collection) : ?>
-                        <li class="gallery-primary__image-tile">
-                            <? echo $collection['title']; ?>
-                        </li>
+                        <a class="gallery-primary__image-tile" href="#">
+                            <div class="gallery-primary__image-tile-content">
+                                <img src="<?php echo wp_get_attachment_image_url($collection['image']); ?>" alt="" class="gallery-primary__image-tile-image">
+                            </div>
+                        </a>
                     <?php endforeach; ?>
-                </ul>
+                </div>
             </div>
         </section>
 
