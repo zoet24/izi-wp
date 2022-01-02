@@ -1,7 +1,8 @@
 <?php
 
 // Imports
-include("blocks/block-test.php");
+// include("blocks/block-test.php");
+include("blocks/media/gallery-primary.php");
 
 
 // Carbon Fields init
