@@ -23,6 +23,9 @@ function zoepixGalleryPrimary() {
                         'vertical' => 'Vertical',
                         'large' => 'Large',
                     ) ),
+                Field::make( 'text', 'link', __( 'Page Link' ) )
+                    ->set_attribute( 'type', 'url' )
+                    ->set_help_text('Enter the URL slug for the linked page')
             ) )
 	) )
     
@@ -43,9 +46,10 @@ function zoepixGalleryPrimary() {
             <div class="gallery-primary__container">
                 <div class="gallery-primary__image-tiles">
                     <?php foreach ($collections as $collection) : ?>
-                        <a class="gallery-primary__image-tile" href="#">
-                            <div class="gallery-primary__image-tile-content">
-                                <img src="<?php echo wp_get_attachment_image_url($collection['image']); ?>" alt="" class="gallery-primary__image-tile-image">
+                        <a href="<?php echo esc_html( $collection['link'] ); ?>" class="gallery-primary__image-tile gallery-primary__image-tile--<?php echo ($collection['image_size'][0]); ?>">
+                            <img src="<?php echo wp_get_attachment_image_url($collection['image']); ?>" alt="" class="gallery-primary__image-tile-image">
+                            <div class="gallery-primary__image-tile-overlay">
+                                <h4 class="gallery-primary__image-tile-caption"><?php echo esc_html( $collection['caption'] ); ?></h4>
                             </div>
                         </a>
                     <?php endforeach; ?>
