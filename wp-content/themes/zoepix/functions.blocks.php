@@ -2,6 +2,7 @@
 
 // Imports
 include("blocks/media/gallery-primary.php");
+include("blocks/media/gallery-secondary.php");
 
 
 // Carbon Fields init

@@ -44,7 +44,18 @@ function zoepix_register_scripts(){
     
 }
 
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'zoepix-js-script' !== $handle ) {
+        return $tag;
+    }
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;
+}
+
 add_action( 'wp_enqueue_scripts', 'zoepix_register_scripts');
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
 
 // Setup menu locations

@@ -1,0 +1,5 @@
+.gallery-secondary {
+    &__container {
+        @include containerFull();
+    }
+}

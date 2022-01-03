@@ -52,8 +52,8 @@ $galleryPrimary-gridGap: 20px;
             }
 
             .gallery-primary__image-tile-overlay-border {
-                width: 85%;
-                height: 85%;
+                width: calc(100% - 75px);
+                height: calc(100% - 75px);
                 opacity: 1;
             }
 
