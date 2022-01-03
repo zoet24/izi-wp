@@ -46,12 +46,19 @@ function zoepixGalleryPrimary() {
             <div class="gallery-primary__container">
                 <div class="gallery-primary__image-tiles">
                     <?php foreach ($collections as $collection) : ?>
-                        <a href="<?php echo esc_html( $collection['link'] ); ?>" class="gallery-primary__image-tile gallery-primary__image-tile--<?php echo ($collection['image_size'][0]); ?>">
-                            <img src="<?php echo wp_get_attachment_image_url($collection['image']); ?>" alt="" class="gallery-primary__image-tile-image">
-                            <div class="gallery-primary__image-tile-overlay">
-                                <h4 class="gallery-primary__image-tile-caption"><?php echo esc_html( $collection['caption'] ); ?></h4>
+                        <?php if ($collection['image']) : ?>
+                            <a href="<?php echo esc_html( $collection['link'] ); ?>" class="gallery-primary__image-tile gallery-primary__image-tile--<?php echo ($collection['image_size'][0]); ?>">
+                                <img src="<?php echo wp_get_attachment_image_url($collection['image'], 'galleryPrimary'); ?>" alt="<?php echo esc_html( $collection['caption'] ); ?>" class="gallery-primary__image-tile-image">
+                                <div class="gallery-primary__image-tile-overlay">
+                                    <div class="gallery-primary__image-tile-overlay-border">
+                                        <h4 class="gallery-primary__image-tile-caption"><?php echo esc_html( $collection['caption'] ); ?></h4>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php else: ?>
+                            <div class="gallery-primary__image-tile gallery-primary__image-tile--spacer gallery-primary__image-tile--<?php echo ($collection['image_size'][0]); ?>">
                             </div>
-                        </a>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <main class="">
     <?php the_content(); ?>
-  </main
+  </main>
 <?php endwhile; else : ?>
 
 <?php endif; ?>

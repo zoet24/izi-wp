@@ -1,8 +1,33 @@
-@mixin t_tag {
+// @mixin t_h1 {
+  
+// }
+
+// @mixin t_h2 {
+  
+// }
+
+// @mixin t_h3 {
+  
+// }
+
+// @mixin t_h4 {
+  
+// }
+
+// @mixin t_h5 {
+  
+// }
+
+// @mixin t_h6 {
+  
+// }
+
+@mixin t_tag_lg {
     color: $white;
-    font-size: 1rem;
-    font-family: $zoepix-f-primary;
+    font-size: 1.5rem;
+    font-family: $f-primary;
     font-weight: $f-medium;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     text-align: center;
   }

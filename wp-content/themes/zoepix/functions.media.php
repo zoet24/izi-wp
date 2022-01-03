@@ -1,16 +1,6 @@
 <?php
 // Add custom image sizes
-// add_image_size('mobile_hero', 1200, 1200, array( 'center', 'center' ) );
-
-// function add_custom_sizes( $sizes ) {
-// 	return array_merge(
-// 		$sizes, array(
-// 			'mobile_hero'  => __( 'Mobile - Hero' )
-// 		)
-// 	);
-// }
-
-// add_filter( 'image_size_names_choose', 'add_custom_sizes' );
+add_image_size('galleryPrimary', 2000, 2000, array( 'center', 'center' ) );
 
 
 // Get video and video thumbnails
