@@ -28,7 +28,7 @@ add_action('after_setup_theme', 'zoepix_theme_support');
 function zoepix_register_styles(){
 
     // Add zoepix-bootstrap into the array box to show that zoepix-style is dependent on zoepix-bootstrap, so zoepix-bootstrap will load first
-    wp_enqueue_style('zoepix-css-style', get_template_directory_uri() . "/dist/css/style.css");
+    wp_enqueue_style('zoepix-css-style', get_template_directory_uri() . "/dist/bundle.css");
     // wp_enqueue_style('zoepix-css-colours', get_template_directory_uri() . "/dist/css/colors.css", array(), $version, 'all');
     wp_enqueue_style('zoepix-css-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     
@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', 'zoepix_register_styles');
 // Dynamically add in script sheets
 function zoepix_register_scripts(){
 
-    wp_enqueue_script('zoepix-js-script', get_template_directory_uri() . "/src/scripts/main.js", array(), '1.0', true);
+    wp_enqueue_script('zoepix-js-script', get_template_directory_uri() . "/dist/bundle.js", array(), '1.0', true);
     
 }
 

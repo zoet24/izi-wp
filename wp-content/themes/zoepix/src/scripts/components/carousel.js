@@ -1,1 +1,1 @@
-// Find out how to import/export snippets
+console.log("Hello from carousel updated js files!")
