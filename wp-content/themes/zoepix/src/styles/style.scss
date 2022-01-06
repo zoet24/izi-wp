@@ -3,8 +3,8 @@
 @import "config";
 
 // Components
-@import "blocks";
 @import "components";
+@import "blocks";
 
 body {
     margin: 0;
@@ -19,5 +19,13 @@ section {
   
     @include r(mobile) {
         padding: $padding-mobile;
+    }
+}
+
+.remove-section-padding {
+    padding: 0;
+  
+    @include r(mobile) {
+        padding: 0;
     }
 }

@@ -26,7 +26,14 @@ function zoepixGalleryPrimary() {
                 Field::make( 'text', 'link', __( 'Page Link' ) )
                     ->set_attribute( 'type', 'url' )
                     ->set_help_text('Enter the URL slug for the linked page')
+            ) ),
+        Field::make( 'select', 'remove_padding', 'Remove padding' )
+            ->add_options( array(
+                'yes' => 'Yes',
+                'no' => 'No'
             ) )
+            ->set_default_value( 'no' )
+            ->set_help_text( 'Select yes to remove padding from top and bottom of section' )
 	) )
     
     // Block definition
@@ -39,10 +46,11 @@ function zoepixGalleryPrimary() {
 
         // Block variables
         $collections = $fields['gallery_images'];
+        $removePadding = $fields['remove_padding'];
 
 		?>
 
-        <section class="gallery-primary">
+        <section class="gallery-primary <?php if ($removePadding == 'yes') : ?>remove-section-padding<?php endif; ?>">
             <div class="gallery-primary__container">
                 <div class="gallery-primary__image-tiles">
                     <?php foreach ($collections as $collection) : ?>

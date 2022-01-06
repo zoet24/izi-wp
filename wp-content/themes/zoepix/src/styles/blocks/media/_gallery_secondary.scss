@@ -1,5 +1,9 @@
 .gallery-secondary {
     &__container {
         @include containerFull();
+
+        border: black solid 2px;
+
+        height: calc(100vh - #{$headerheight} - #{$footerheight});
     }
 }

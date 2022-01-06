@@ -66,7 +66,7 @@ function getSVG($path, $full_path = false)
     if ($full_path) {
         $loc = $path;
     } else {
-        $loc = __DIR__ . "/images/$path";
+        $loc = __DIR__ . "/media/svgs/$path";
     }
 
 
@@ -74,7 +74,7 @@ function getSVG($path, $full_path = false)
         if ($full_path) {
             echo "file not found - " . $path;
         } else {
-            echo "file not found - " . __DIR__ . "/images/$path";
+            echo "file not found - " . __DIR__ . "/media/svgs/$path";
         }
 
         return false;

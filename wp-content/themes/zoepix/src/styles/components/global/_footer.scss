@@ -1,3 +1,6 @@
-footer {
-    color: green;
+$footerheight: 100px;
+
+.footer {
+    height: $footerheight;
+    border: black 2px solid;
 }
