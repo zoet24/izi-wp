@@ -2,18 +2,27 @@
     &__container {
         @include containerFull();
 
-        border: black solid 2px;
-
-        height: calc(100vh - #{$headerheight} - #{$footerheight});
+        height: calc(100vh - #{$headerHeight});
         position: relative;
     }
 
+    &__slide-text-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
     &__slide-caption {
         @include t_h4();
+        margin: 20px 0 0;
     }
 
     &__slide-description {
         @include t_h5();
         font-style: italic;
+        margin: 10px 0 0;
     }
 }

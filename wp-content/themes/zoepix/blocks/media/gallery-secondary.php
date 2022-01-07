@@ -41,15 +41,17 @@ function zoepixGallerySecondary() {
                 <div class="carousel__slider">
                     <?php foreach ($images as $image) : ?>
                         <div class="carousel__slide">
-                            <!-- Image caption -->
-                            <div class="gallery-secondary__slide-caption-wrapper">
-                                <h4 class="gallery-secondary__slide-caption"><?php echo wp_get_attachment_caption($image); ?></h4>
-                            </div>
-                            <!-- Image desription -->
-                            <div class="gallery-secondary__slide-description-wrapper">
-                                <h5 class="gallery-secondary__slide-description"><?php echo (get_post($image)->post_content); ?></h5>
-                            </div>
                             <img class="carousel__slide-image" class="carousel__slide" src="<?php echo wp_get_attachment_image_url($image, 'galleryPrimary'); ?>" alt="">
+                            <div class="gallery-secondary__slide-text-wrapper">
+                                <!-- Image caption -->
+                                <div class="gallery-secondary__slide-caption-wrapper">
+                                    <h4 class="gallery-secondary__slide-caption"><?php echo wp_get_attachment_caption($image); ?></h4>
+                                </div>
+                                <!-- Image desription -->
+                                <div class="gallery-secondary__slide-description-wrapper">
+                                    <h5 class="gallery-secondary__slide-description"><?php echo (get_post($image)->post_content); ?></h5>
+                                </div>
+                            </div>
                         </div>                            
                     <?php endforeach; ?>
                 </div>
