@@ -5,6 +5,7 @@ $carouselTextHeight: 80px;
     &__slider {
         height: calc(100% - #{$carouselControlsHeight});
         padding-top: $carouselControlsHeight;
+        overflow: hidden;
     }
 
     &__slide {
@@ -31,13 +32,16 @@ $carouselTextHeight: 80px;
         left: 0;
         right: 0;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+
+        &--right {
+            display: flex;
+        }
     }
 
     &__button {
         background: none;
         border: none;
-        margin-bottom: 20px;
     }
 
     &__prev-next-button {

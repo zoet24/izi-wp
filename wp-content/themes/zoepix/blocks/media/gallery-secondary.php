@@ -58,16 +58,26 @@ function zoepixGallerySecondary() {
                 <!-- Flkty controls -->
                 <?php if (count($images) > 1) : ?>
                     <div class="carousel__controls">
-                        <button class="carousel__button carousel__prev-next-button carousel__prev" type="button" aria-label="Previous">
-                            <?= getSVG('flkty-left.svg') ?>
-                        </button>
-                        <!-- Image number -->
-                        <div class="carousel__slide-number-wrapper">
-                            <h4 class="carousel__slide-number"><span class="carousel__slide-number--index">1</span>/<?php echo count($images); ?></h4>
+                        <!-- Breadcrumbs -->
+                        <div class="carousel__controls--left">
+                            <div class="breadcrumbs">
+                                <a class="breadcrumbs__page-root" href=""><span class="breadcrumbs_page-root-text"></span></a>
+                                <span> > </span>
+                                <a class="breadcrumbs__page" href=""><span class="breadcrumbs_page-text"></span></a>
+                            </div>
                         </div>
-                        <button class="carousel__button carousel__prev-next-button carousel__next" type="button" aria-label="Next">
-                            <?= getSVG('flkty-right.svg') ?>
-                        </button>
+                        <div class="carousel__controls--right">
+                            <button class="carousel__button carousel__prev-next-button carousel__prev" type="button" aria-label="Previous">
+                                <?= getSVG('flkty-left.svg') ?>
+                            </button>
+                            <!-- Image number -->
+                            <div class="carousel__slide-number-wrapper">
+                                <h4 class="carousel__slide-number"><span class="carousel__slide-number--index">1</span>/<?php echo count($images); ?></h4>
+                            </div>
+                            <button class="carousel__button carousel__prev-next-button carousel__next" type="button" aria-label="Next">
+                                <?= getSVG('flkty-right.svg') ?>
+                            </button>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>

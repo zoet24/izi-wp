@@ -1,3 +1,4 @@
 import '../styles/style.scss';
 
-import './components/carousel'
+import './components/breadcrumbs';
+import './components/carousel';
