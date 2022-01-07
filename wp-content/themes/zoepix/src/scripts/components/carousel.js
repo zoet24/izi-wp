@@ -17,12 +17,38 @@ import Flickity from 'flickity';
               draggable: true,
               prevNextButtons: false,
               contain: true,
-              wrapAround: false
+              wrapAround: true
             });
           }
 
           // Resize slides after flkty init
           flkty.resize();
+
+          // Go to next slide
+          document.addEventListener('click', (e) => {
+            if (!e.target.closest('.carousel__next')) return false;
+
+            // Update slide number
+            var currentSlide = e.target.closest('.carousel__controls').querySelector('.carousel__slide-number--index');
+            flkty.on('change', (index) => {
+              currentSlide.innerHTML = (index + 1);
+            });
+
+            flkty.next();
+          });
+
+          // Go to previous slide
+          document.addEventListener('click', (e) => {
+            if (!e.target.closest('.carousel__prev')) return false;
+
+            // Update slide number
+            var currentSlide = e.target.closest('.carousel__controls').querySelector('.carousel__slide-number--index');
+            flkty.on('change', (index) => {
+              currentSlide.innerHTML = (index + 1);
+            }); 
+
+            flkty.previous();
+          });
         });
       }
     })

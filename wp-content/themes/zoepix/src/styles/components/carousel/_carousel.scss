@@ -1,6 +1,7 @@
 .carousel {
     &__slider {
-        height: 100%;
+        height: calc(100% - 50px);
+        margin-top: 50px;
     }
 
     &__slide {
@@ -19,6 +20,32 @@
         bottom: 0;
         left: 0;
         right: 0;
+    }
+
+    &__controls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    &__prev-next-button {
+        svg {
+            height: 20px;
+        }
+    }
+
+    &__slide-number {
+        @include t_tag_lg();
+        margin: 0;
     }
 }
 

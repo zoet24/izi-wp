@@ -5,5 +5,15 @@
         border: black solid 2px;
 
         height: calc(100vh - #{$headerheight} - #{$footerheight});
+        position: relative;
+    }
+
+    &__slide-caption {
+        @include t_h4();
+    }
+
+    &__slide-description {
+        @include t_h5();
+        font-style: italic;
     }
 }

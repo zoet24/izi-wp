@@ -39,15 +39,16 @@ function zoepixGallerySecondary() {
         <section class="gallery-secondary <?php if ($removePadding == 'yes') : ?>remove-section-padding<?php endif; ?>">
             <div class="gallery-secondary__container">
                 <div class="carousel__slider">
-                    <?php foreach ($images as $index => $image) : ?>
+                    <?php foreach ($images as $image) : ?>
                         <div class="carousel__slide">
-                            <div><?php echo ($index + 1); ?></div>
-                            <!-- Image title -->
-                            <div><?php get_the_title($image); ?></div>
                             <!-- Image caption -->
-                            <div><?php echo wp_get_attachment_caption($image); ?></div>
+                            <div class="gallery-secondary__slide-caption-wrapper">
+                                <h4 class="gallery-secondary__slide-caption"><?php echo wp_get_attachment_caption($image); ?></h4>
+                            </div>
                             <!-- Image desription -->
-                            <div><?php echo (get_post($image)->post_content); ?></div>
+                            <div class="gallery-secondary__slide-description-wrapper">
+                                <h5 class="gallery-secondary__slide-description"><?php echo (get_post($image)->post_content); ?></h5>
+                            </div>
                             <img class="carousel__slide-image" class="carousel__slide" src="<?php echo wp_get_attachment_image_url($image, 'galleryPrimary'); ?>" alt="">
                         </div>                            
                     <?php endforeach; ?>
@@ -55,14 +56,16 @@ function zoepixGallerySecondary() {
                 <!-- Flkty controls -->
                 <?php if (count($images) > 1) : ?>
                     <div class="carousel__controls">
-                        <div class="carousel__controls--buttons">
-                            <button class="carousel__button carousel__prev-next-button carousel__prev" type="button" aria-label="Previous">
-                                <?= getSVG('flkty-left.svg') ?>
-                            </button>
-                            <button class="carousel__button carousel__prev-next-button carousel__next" type="button" aria-label="Next">
-                                <?= getSVG('flkty-right.svg') ?>
-                            </button>
+                        <button class="carousel__button carousel__prev-next-button carousel__prev" type="button" aria-label="Previous">
+                            <?= getSVG('flkty-left.svg') ?>
+                        </button>
+                        <!-- Image number -->
+                        <div class="carousel__slide-number-wrapper">
+                            <h4 class="carousel__slide-number"><span class="carousel__slide-number--index">1</span>/<?php echo count($images); ?></h4>
                         </div>
+                        <button class="carousel__button carousel__prev-next-button carousel__next" type="button" aria-label="Next">
+                            <?= getSVG('flkty-right.svg') ?>
+                        </button>
                     </div>
                 <?php endif; ?>
             </div>
