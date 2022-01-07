@@ -1,5 +1,5 @@
 import Flickity from 'flickity';
-// require('flickity-imagesloaded');
+require('flickity-fullscreen');
 
 ['DOMContentLoaded'].map((event) => 
     document.addEventListener(event, () => {
@@ -17,7 +17,8 @@ import Flickity from 'flickity';
               draggable: true,
               prevNextButtons: false,
               contain: true,
-              wrapAround: true
+              wrapAround: true,
+              fullscreen: true,
             });
           }
 

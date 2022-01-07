@@ -6,6 +6,10 @@ $carouselTextHeight: 80px;
         height: calc(100% - #{$carouselControlsHeight});
         padding-top: $carouselControlsHeight;
         overflow: hidden;
+
+        &:focus-visible {
+            outline: none;
+        }
     }
 
     &__slide {
@@ -30,7 +34,7 @@ $carouselTextHeight: 80px;
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
+        right: 40px;
         display: flex;
         justify-content: space-between;
 
@@ -42,11 +46,13 @@ $carouselTextHeight: 80px;
     &__button {
         background: none;
         border: none;
+        cursor: pointer;
     }
 
     &__prev-next-button {
         svg {
             height: 20px;
+            cursor: pointer;
         }
     }
 
@@ -66,4 +72,59 @@ $carouselTextHeight: 80px;
 
 .flickity-slider {
     height: 100% !important;
+}
+
+/* Flickity fullscreen v1.0.1 */
+.flickity-enabled.is-fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0%, 0%, 0.9);
+    padding-bottom: 35px;
+    z-index: 1;
+}
+  
+/* Prevent page scrolling when flickity is fullscreen */
+html.is-flickity-fullscreen {
+    overflow: hidden;
+}
+  
+/* Flickity fullscreen button */
+.flickity-fullscreen-button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    // width: 20px;
+    // height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+.flickity-fullscreen-button .flickity-button-icon {
+    width: 20px;
+    height: 20px;
+    // left: 0px;
+    // top: 0px;
+}  
+  
+/* Right to left */
+.flickity-rtl .flickity-fullscreen-button {
+    right: auto;
+    left: 10px;
+}
+  
+.flickity-fullscreen-button-exit { 
+    display: none; 
+}
+  
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit { 
+    display: block; 
+}
+
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view { 
+    display: none; 
 }
