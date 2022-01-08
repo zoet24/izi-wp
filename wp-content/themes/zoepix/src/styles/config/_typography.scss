@@ -1,26 +1,34 @@
-// @mixin t_h1 {
-  
-// }
-
-// @mixin t_h2 {
-  
-// }
-
-// @mixin t_h3 {
-  
-// }
-
-@mixin t_h4 {
+@mixin t_h1 {
   color: $black;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-family: $f-primary;
-  font-weight: $f-regular;
+  font-weight: $f-bold;
   letter-spacing: normal;
   // text-transform: uppercase;
   // text-align: center;
 }
 
-@mixin t_h5 {
+@mixin t_h2 {
+  color: $black;
+  font-size: 1.5rem;
+  font-family: $f-primary;
+  font-weight: $f-bold;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_h3 {
+  color: $black;
+  font-size: 1.25rem;
+  font-family: $f-primary;
+  font-weight: $f-bold;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_h4 {
   color: $black;
   font-size: 1rem;
   font-family: $f-primary;
@@ -30,9 +38,55 @@
   // text-align: center;
 }
 
-// @mixin t_h6 {
-  
-// }
+@mixin t_h5 {
+  color: $black;
+  font-size: 0.83rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_h6 {
+  color: $black;
+  font-size: 0.67rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_p {
+  color: $black;
+  font-size: 1rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_a {
+  color: $black;
+  font-size: 1rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+@mixin t_li {
+  color: $black;
+  font-size: 1rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  // text-transform: uppercase;
+  // text-align: center;
+}
 
 @mixin t_tag_lg {
     color: $black;
@@ -42,4 +96,4 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-align: center;
-  }
+}

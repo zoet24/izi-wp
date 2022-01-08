@@ -2,7 +2,7 @@
 <?php component('global/header') ?>
     
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <main class="">
+  <main class="zoepix">
     <?php the_content(); ?>
   </main>
 <?php endwhile; else : ?>

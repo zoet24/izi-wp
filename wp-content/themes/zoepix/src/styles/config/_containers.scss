@@ -59,3 +59,25 @@ $g-mobile: 35px;
       max-width: calc(#{$cw-ultrawide});
     }
   }
+
+
+  @mixin containerFullNoGutters($width: 100%) {
+    margin: 0 auto;
+
+    @include r(mobile) {
+      width: $width;
+    }
+
+    @include r(tablet) {
+      width: $width;
+    }
+
+    @include r(desktop) {
+      width: $width;
+    }
+
+    @include r(ultrawide) {
+      width: $width;
+      max-width: calc(#{$cw-ultrawide});
+    }
+  }

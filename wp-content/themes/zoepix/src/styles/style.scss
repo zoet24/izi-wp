@@ -14,6 +14,48 @@ body {
     font-family: $f-primary;
 }
 
+.zoepix {
+    h1 {
+        @include t_h1();
+    }
+
+    h2 {
+        @include t_h2();
+    }
+
+    h3 {
+        @include t_h3();
+    }
+
+    h4 {
+        @include t_h4();
+    }
+
+    h5 {
+        @include t_h5();
+    }
+
+    h6 {
+        @include t_h6();
+    }
+
+    p {
+        @include t_p();
+    }
+
+    a {
+        @include t_a();
+    }
+
+    ol li {
+        @include t_li();
+    }
+
+    ul li {
+        @include t_li();
+    }
+}
+
 section {
     padding: $padding-desktop;
   
