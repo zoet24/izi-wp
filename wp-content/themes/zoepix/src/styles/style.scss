@@ -14,7 +14,7 @@ body {
     font-family: $f-primary;
 }
 
-.zoepix {
+main {
     h1 {
         @include t_h1();
     }

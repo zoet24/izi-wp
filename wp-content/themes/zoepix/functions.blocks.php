@@ -10,11 +10,29 @@ include("blocks/media/gallery-secondary.php");
 use Carbon_Fields\Field;
 use Carbon_Fields\Container;
 
-add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
-function crb_attach_theme_options() {
-    Container::make( 'theme_options', __( 'Theme Options' ) )
+add_action( 'carbon_fields_register_fields', 'attach_header_options' );
+function attach_header_options() {
+    Container::make( 'theme_options', __( 'Header Options' ) )
         ->add_fields( array(
-            Field::make( 'rich_text', 'crb_footer_copyright', 'Copyright' ),
+            Field::make( 'image', 'header_logo_mobile', 'Logo Mobile' ),
+            Field::make( 'image', 'header_logo_desktop', 'Logo Desktop' ),
+        ) );
+}
+
+add_action( 'carbon_fields_register_fields', 'attach_footer_options' );
+function attach_footer_options() {
+    Container::make( 'theme_options', __( 'Footer Options' ) )
+        ->add_fields( array(
+            Field::make( 'text', 'footer_email', 'Email Address' ),
+            Field::make( 'text', 'footer_phone', 'Phone Number' ),
+            Field::make( 'rich_text', 'footer_copyright', 'Copyright' ),
+            Field::make( 'complex', 'footer_socials', __( 'Social Media Links' ) )
+                ->set_layout( 'tabbed-horizontal' )
+                ->add_fields( array(
+                    Field::make( 'image', 'footer_socials_icon', __('Social Icon') ),
+                    Field::make( 'text', 'footer_socials_link', __( 'Social Link' ) )
+                        ->set_attribute( 'type', 'url' )
+                ) ),
         ) );
 }
 
