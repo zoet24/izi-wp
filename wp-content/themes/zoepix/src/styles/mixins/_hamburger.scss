@@ -1,0 +1,60 @@
+$hamburgerLineHeight: 6px;
+
+@mixin hamburger() {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: $a-medium ease-in-out;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        height: $hamburgerLineHeight;
+        width: 100%;
+        background: $black;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: $a-short ease-in-out;
+    }
+
+    span:nth-child(1) {
+        top: 0%;
+    }
+
+    span:nth-child(2) {
+        top: calc(50% - (#{$hamburgerLineHeight} / 2));
+    }
+
+    span:nth-child(3) {
+        top: calc(50% - (#{$hamburgerLineHeight} / 2));
+    }
+
+    span:nth-child(4) {
+        top: calc(100% - #{$hamburgerLineHeight});
+    }
+
+    &__is-active {
+        span:nth-child(1) {
+            top: calc(50% - (#{$hamburgerLineHeight} / 2));
+            width: 0%;
+            left: 50%;
+        }
+
+        span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+    
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    
+        span:nth-child(4) {
+            top: calc(50% - (#{$hamburgerLineHeight} / 2));
+            width: 0%;
+            left: 50%;
+        }
+    }
+}

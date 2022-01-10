@@ -3,4 +3,17 @@ $headerHeight: 100px;
 .header {
     height: $headerHeight;
     border: black 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+	@include r(mobile, tablet) {
+		@include hamburger;
+	}
+
+    @include r(desktop, ultrawide) {
+        display: none;
+    }
 }

@@ -15,7 +15,7 @@
   \***********************************************/
 /***/ (() => {
 
-eval("['DOMContentLoaded'].map(function (event) {\n  return document.addEventListener(event, function () {\n    var urlRoot = window.location.href.split('zoepix')[0] + 'zoepix';\n    var urlCrumbs = window.location.href.split('zoepix')[1].split('/');\n    var breadcrumbsPageRoot = document.querySelector('.breadcrumbs__page-root');\n    var breadcrumbsPage = document.querySelector('.breadcrumbs__page');\n    console.log(urlRoot, urlCrumbs);\n    console.log(breadcrumbsPageRoot, breadcrumbsPage);\n    breadcrumbsPageRoot.innerHTML = urlCrumbs[1];\n    breadcrumbsPage.innerHTML = urlCrumbs[2];\n    breadcrumbsPageRoot.href = urlRoot + '/' + urlCrumbs[1];\n    breadcrumbsPage.href = window.location.href;\n  });\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/components/breadcrumbs.js?");
+eval("['DOMContentLoaded'].map(function (event) {\n  return document.addEventListener(event, function () {\n    if (document.querySelector('.breadcrumbs')) {\n      var urlRoot = window.location.href.split('zoepix')[0] + 'zoepix';\n      var urlCrumbs = window.location.href.split('zoepix')[1].split('/');\n      var breadcrumbsPageRoot = document.querySelector('.breadcrumbs__page-root');\n      var breadcrumbsPage = document.querySelector('.breadcrumbs__page');\n      breadcrumbsPageRoot.innerHTML = urlCrumbs[1];\n      breadcrumbsPage.innerHTML = urlCrumbs[2];\n      breadcrumbsPageRoot.href = urlRoot + '/' + urlCrumbs[1];\n      breadcrumbsPage.href = window.location.href;\n    }\n  });\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/components/breadcrumbs.js?");
 
 /***/ }),
 
@@ -48,7 +48,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var flic
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/breadcrumbs */ \"./src/scripts/components/breadcrumbs.js\");\n/* harmony import */ var _components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ \"./src/scripts/components/carousel.js\");\n/* harmony import */ var _components_carousel_full__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/carousel-full */ \"./src/scripts/components/carousel-full.js\");\n\n\n\n\n\n//# sourceURL=webpack://zoepix/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/breadcrumbs */ \"./src/scripts/components/breadcrumbs.js\");\n/* harmony import */ var _components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_breadcrumbs__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ \"./src/scripts/components/carousel.js\");\n/* harmony import */ var _components_carousel_full__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/carousel-full */ \"./src/scripts/components/carousel-full.js\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mixins/hamburger */ \"./src/scripts/mixins/hamburger.js\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mixins_hamburger__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://zoepix/./src/scripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/mixins/hamburger.js":
+/*!*****************************************!*\
+  !*** ./src/scripts/mixins/hamburger.js ***!
+  \*****************************************/
+/***/ (() => {
+
+eval("document.addEventListener('click', function (e) {\n  if (!e.target.closest('.hamburger')) return;\n  var hamburger = e.target.closest('.hamburger');\n  hamburger.classList[hamburger.matches('.hamburger__is-active') ? 'remove' : 'add']('hamburger__is-active');\n  document.body.classList[document.body.matches('.menu-is-open') ? 'remove' : 'add']('menu-is-open');\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/mixins/hamburger.js?");
 
 /***/ }),
 
