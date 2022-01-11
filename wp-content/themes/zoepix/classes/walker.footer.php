@@ -1,10 +1,10 @@
 <?php
-class Zoepix_Header_Walker extends Walker_Nav_Menu
+class Zoepix_Footer_Walker extends Walker_Nav_Menu
 {
   function start_lvl(&$output, $depth = 0, $args = array())
   {
-    $classes = ['header__navbar--links'];
-    if ($depth !== 0) $classes[] = 'header__navbar--links--child';
+    $classes = ['footer__navbar--links'];
+    if ($depth !== 0) $classes[] = 'footer__navbar--links--child';
     $output .= "<ul class='" . implode(' ', $classes) . "'>\n";
   }
 
@@ -18,11 +18,11 @@ class Zoepix_Header_Walker extends Walker_Nav_Menu
     $title = $item->title;
     $description = $item->description;
     $permalink = $item->url;
-    $classes = ['header__navbar--link'];
+    $classes = ['footer__navbar--link'];
 
-    if ($args->walker->has_children) $classes[] = 'header__navbar--link--children';
-    if ($depth === 0) $classes[] = 'header__navbar--link--top';
-    if (!is_front_page() && ($item->current || $item->current_item_ancestor || $item->current_item_parent)) $classes[] = 'header__navbar--link--current';
+    if ($args->walker->has_children) $classes[] = 'footer__navbar--link--children';
+    if ($depth === 0) $classes[] = 'footer__navbar--link--top';
+    if (!is_front_page() && ($item->current || $item->current_item_ancestor || $item->current_item_parent)) $classes[] = 'footer__navbar--link--current';
     $output .= "<li class='" . implode(' ', $classes) . "' data-depth='" . $depth . "'>";
 
     if ($permalink && $permalink != '#') {
@@ -34,7 +34,7 @@ class Zoepix_Header_Walker extends Walker_Nav_Menu
     $output .= $title;
 
     if ($description != '' && $depth == 0) {
-      $output .= '<small class="header__navbar--description">' . $description . '</small>';
+      $output .= '<small class="footer__navbar--description">' . $description . '</small>';
     }
 
     if ($permalink && $permalink != '#') {
@@ -43,7 +43,7 @@ class Zoepix_Header_Walker extends Walker_Nav_Menu
       $output .= '</span>';
     }
 
-    if ($args->walker->has_children) $output .= '<div class="header__navbar--subnav">';
+    if ($args->walker->has_children) $output .= '<div class="footer__navbar--subnav">';
   }
 
   function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0)

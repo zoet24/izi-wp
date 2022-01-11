@@ -7,6 +7,7 @@ include("functions.options.php");
 include("functions.walker.php");
 
 // Classes
+include("classes/walker.footer.php");
 include("classes/walker.header.php");
 
 // Remove actions
