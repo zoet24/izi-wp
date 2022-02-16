@@ -79,7 +79,7 @@ function my_login_logo_one()
 ?>
     <!-- <style type="text/css">
         body.login div#login h1 a {
-            background-image: url('/app/themes/my-bones/images/logos/logo.png');
+            background-image: url('/app/themes/zoepix/media/logos/logo.png');
             background-size: contain;
             width: auto;
             height: 90px;

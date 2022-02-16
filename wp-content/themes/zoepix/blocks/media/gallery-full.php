@@ -34,18 +34,18 @@ function zoepixGalleryFullscreen() {
 	->set_render_callback( function ( $fields ) {
 
         // Block variables
-        $collections = $fields['gallery_images'];
+        $images = $fields['gallery_images'];
         $removePadding = $fields['remove_padding'];
 
 		?>
 
         <section class="gallery-fullscreen <?php if ($removePadding == 'yes') : ?>remove-section-padding<?php endif; ?>">
             <div class="gallery-fullscreen__container">
-                <div class="gallery-fullscreen__image-tiles carousel-full__slider">
-                    <?php foreach ($collections as $collection) : ?>
-                        <?php if ($collection['image']) : ?>
-                            <div class="carousel-full__slide">
-                                <img src="<?php echo wp_get_attachment_image_url($collection['image'], 'galleryPrimary'); ?>" alt="" class="gallery-fullscreen__image-tile-image carousel-full__slide-image">
+                <div class="gallery-fullscreen__slider carousel-full__slider">
+                    <?php foreach ($images as $image) : ?>
+                        <?php if ($image['image']) : ?>
+                            <div class="gallery-fullscreen__slide carousel-full__slide">
+                                <img class="gallery-fullscreen__slide-image carousel-full__slide-image" src="<?php echo wp_get_attachment_image_url($image['image'], 'galleryPrimary'); ?>" alt="">
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>

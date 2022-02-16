@@ -1,6 +1,6 @@
 <?php
 
-// Imports
+// Imports - Blocks
 include("blocks/media/gallery-full.php");
 include("blocks/media/gallery-primary.php");
 include("blocks/media/gallery-secondary.php");
@@ -36,6 +36,13 @@ function attach_footer_options() {
         ) );
 }
 
+add_action( 'carbon_fields_register_fields', 'attach_404_options' );
+function attach_404_options() {
+    Container::make( 'theme_options', __( '404 Options' ) )
+        ->add_fields( array(
+            Field::make( 'text', '404_text', '404 Text' )
+        ) );
+}
 
 // Include components
 function component($name, $args = [], $echo = true)
