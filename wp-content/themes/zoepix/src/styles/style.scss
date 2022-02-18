@@ -6,15 +6,38 @@
 @import "components";
 @import "blocks";
 
+html {
+    font-size: 16px;
+    font-family: $f-primary;
+}
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    font-family: $f-primary;
 }
 
 main {
+    background: $white;
+    margin-top: $hh-mobile;
+    min-height: calc(100vh - #{$hh-mobile} - #{$hh-mobile});
+
+    @include r(tablet) {
+        margin-top: $hh-tablet;
+        min-height: calc(100vh - #{$hh-tablet} - #{$hh-tablet});
+    }
+
+    @include r(desktop) {
+        margin-top: $hh-desktop;
+        min-height: calc(100vh - #{$hh-desktop} - #{$fh-desktop});
+    }
+
+    @include r(ultrawide) {
+        margin-top: $hh-ultrawide;
+        min-height: calc(100vh - #{$hh-ultrawide} - #{$fh-ultrawide});
+    }
+
     h1 {
         @include t_h1();
     }
@@ -57,17 +80,13 @@ main {
 }
 
 section {
-    padding: $padding-desktop;
+    padding: $p-mobile;
   
-    @include r(mobile) {
-        padding: $padding-mobile;
+    @include r(desktop, ultrawide) {
+        padding: $p-desktop;
     }
 }
 
 .remove-section-padding {
     padding: 0;
-  
-    @include r(mobile) {
-        padding: 0;
-    }
 }

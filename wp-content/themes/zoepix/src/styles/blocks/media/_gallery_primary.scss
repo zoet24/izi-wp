@@ -117,7 +117,6 @@ $galleryPrimary-gridGap: 20px;
     }
 
     &__image-tile-caption {
-        @include t_tag_lg;
         color: $white;
         opacity: 0;
         transition: $a-short;

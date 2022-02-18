@@ -16,9 +16,20 @@
 *Webpack*
 - For instructions on setting up Webpack follow https://dev.to/antonmelnyk/how-to-configure-webpack-from-scratch-for-a-basic-website-46a5
 
-*Development*
+*Development - Principles*
 - Update CSS and JS with npm run build
 - **Mobile first design**
 
-*Git convention*
+*Development - Processes*
+1. Make list of typographies, vars and containers from wireframes and use config blocks to add styles
 
+*Dashicons convention*
+- Admin/config/tools: ->set_icon('admin-tools')
+- Images/media: ->set_icon('format-gallery')
+- Text and images: ->set_icon('align-pull-left')
+
+*Git convention*
+- Start commit message with main subject (eg. 'Functions', 'Blocks', 'Style', 'Script')
+- Keep to single sentence with imperative tense
+- If commit affects specific device size add this at end of message
+- Example: "Blocks: Update gallery-full block with RS Photography additions for mobile and tablet"

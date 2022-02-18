@@ -1,0 +1,17 @@
+.containers {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: $black 2px solid;
+        height: 100px;
+
+        &--full {
+            @include containerFull();
+        }
+
+        &--full-no-gutters {
+            @include containerFullNoGutters();
+        }
+    }
+}

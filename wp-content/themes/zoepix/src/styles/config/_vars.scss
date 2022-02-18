@@ -3,6 +3,10 @@
 
 //  Colours
 $white: #ffffff;
+$orange: #ffa500;
+$orange--dark: #d18700;
+$grey--dark: #282828;
+$black--light: #161616;
 $black: #000000;
 
 // Fonts
@@ -21,11 +25,24 @@ $a-short: .3s;
 $a-medium: .6s;
 $a-long: 1s;
 
-// Border Radii
+// Header heights
+$hh-mobile: 60px;
+$hh-tablet: 60px;
+$hh-desktop: 75px;
+$hh-ultrawide: 125px;
 
+// Footer heights
+$fh-mobile: auto;
+$fh-tablet: auto;
+$fh-desktop: 75px;
+$fh-ultrawide: 125px;
 
 // Section padding
-$padding-mobile: 15px 0;
-$padding-desktop: 30px 0;
+$p-mobile: 15px 0;
+$p-desktop: 30px 0;
 
 // Z-indicies
+$z-front: 1;
+$z-header: 10;
+$z-footer: 10;
+$z-menu: 100;

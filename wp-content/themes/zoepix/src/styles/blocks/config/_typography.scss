@@ -1,0 +1,52 @@
+.typography {
+    &__container {
+        @include containerFull();
+    }
+
+    &__h1 {
+        @include t_h1();
+    }
+
+    &__h2 {
+        @include t_h2();
+    }
+
+    &__h3 {
+        @include t_h3();
+    }
+
+    &__h4 {
+        @include t_h4();
+    }
+
+    &__h5 {
+        @include t_h5();
+    }
+
+    &__h6 {
+        @include t_h6();
+    }
+
+    &__p {
+        @include t_p();
+    }
+
+    &__a {
+        @include t_a();
+    }
+
+    &__ol {
+        li {
+            @include t_li();
+        }
+    }
+
+    &__ul {
+        li {
+            @include t_li();
+        }
+    }
+
+    // Custom
+    
+}

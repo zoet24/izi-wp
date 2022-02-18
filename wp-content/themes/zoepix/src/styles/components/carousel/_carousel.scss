@@ -57,7 +57,6 @@ $carouselTextHeight: 80px;
     }
 
     &__slide-number {
-        @include t_tag_lg();
         margin: 0;
     }
 }

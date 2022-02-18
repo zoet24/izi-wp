@@ -1,6 +1,9 @@
 <?php
 
 // Imports - Blocks
+include("blocks/config/containers.php");
+include("blocks/config/typography.php");
+
 include("blocks/media/gallery-full.php");
 include("blocks/media/gallery-primary.php");
 include("blocks/media/gallery-secondary.php");

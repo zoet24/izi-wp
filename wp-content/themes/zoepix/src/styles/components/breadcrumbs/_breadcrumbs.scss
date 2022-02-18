@@ -1,11 +1,9 @@
 .breadcrumbs {
     a {
-        @include t_tag_lg();
         text-decoration: none;
     }
 
     span {
-        @include t_tag_lg();
         text-decoration: none;
     }
 }
