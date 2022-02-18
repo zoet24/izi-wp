@@ -2,7 +2,7 @@
     &__container {
         @include containerFull();
 
-        height: calc(100vh - #{$headerHeight});
+        // height: calc(100vh - #{$headerHeight});
         position: relative;
     }
 

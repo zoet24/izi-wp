@@ -1,19 +1,23 @@
-$hamburgerLineHeight: 6px;
+$hamburgerLineHeight: 4px;
 
 @mixin hamburger() {
-    width: 60px;
-    height: 45px;
     position: relative;
     transform: rotate(0deg);
-    transition: $a-medium ease-in-out;
+    transition: $a-short ease-in-out;
     cursor: pointer;
+
+    @include r(mobile) {
+        width: 40px;
+        height: 25px;
+    }
 
     span {
         display: block;
         position: absolute;
         height: $hamburgerLineHeight;
         width: 100%;
-        background: $black;
+        background: $white;
+        border-radius: $hamburgerLineHeight;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
@@ -36,7 +40,11 @@ $hamburgerLineHeight: 6px;
         top: calc(100% - #{$hamburgerLineHeight});
     }
 
-    &__is-active {
+    &--is-active {
+        span {
+            background: $orange;
+        }
+
         span:nth-child(1) {
             top: calc(50% - (#{$hamburgerLineHeight} / 2));
             width: 0%;
