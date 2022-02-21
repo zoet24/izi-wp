@@ -58,7 +58,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*****************************************/
 /***/ (() => {
 
-eval("document.addEventListener('click', function (e) {\n  if (!e.target.closest('.hamburger')) return;\n  var hamburger = e.target.closest('.hamburger');\n  hamburger.classList[hamburger.matches('.hamburger__is-active') ? 'remove' : 'add']('hamburger__is-active');\n  document.body.classList[document.body.matches('.menu-is-open') ? 'remove' : 'add']('menu-is-open');\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/mixins/hamburger.js?");
+eval("document.addEventListener('click', function (e) {\n  if (!e.target.closest('.hamburger')) return;\n  var hamburger = e.target.closest('.hamburger');\n  var navbar = e.target.closest('.header__container').querySelector('.header__navbar');\n  hamburger.classList[hamburger.matches('.hamburger--is-active') ? 'remove' : 'add']('hamburger--is-active');\n  navbar.classList[navbar.matches('.header__navbar--is-active') ? 'remove' : 'add']('header__navbar--is-active');\n  document.body.classList[document.body.matches('.menu-is-open') ? 'remove' : 'add']('menu-is-open');\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/mixins/hamburger.js?");
 
 /***/ }),
 

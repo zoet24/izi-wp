@@ -27,148 +27,157 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        max-width: 1920px;
+        height: 100%;
+        max-width: $cw-ultrawide;
         margin: 0 auto;
+        padding: 0 15px;
+
+        @include r(tablet) {
+            // padding: 0 40px;
+        }
+    
+        @include r(desktop) {
+            padding: 0 40px;
+        }
+    
+        @include r(ultrawide) {
+            padding: 0;
+        }
     }
 
     &__hamburger {
-        padding: 20px;
         border: none;
         background: none;
         transition: $a-short;
+        padding: 0;
 
-    //     @include r(mobile) {
-    //         padding: 15px;
-    //     }
-
-    //     &:hover {
-    //         .hamburger span {
-    //             background: $orange;
-    //         }
-    //     }
+        &:hover {
+            .hamburger span {
+                background: $orange;
+            }
+        }
     }
 
-    // &__navbar {
-    //     background: rgba($black, 0.8);
-    //     position: absolute;
-    //     top: $hh-desktop;
-    //     bottom: 0;
-    //     left: -340px;
-    //     width: 300px;
-    //     height: calc(100vh - #{$hh-desktop});
-    //     transition: ease $a-medium;
+    .hamburger {
+        @include hamburger;
+    
+        width: 50px;
+        height: 35px;
+    
+        @include r(tablet) {
+            // height: 40px;
+        }
+    
+        @include r(desktop) {
+            height: 40px;
+        }
+    
+        @include r(ultrawide) {
+            width: 70px;
+            height: 50px;
+        }
+    }
 
-    //     @include r(desktop, ultrawide) {
-    //         top: $hh-ultrawide;
-    //         left: -440px;
-    //         width: 400px;
-    //         opacity: 0;
-    //     }
+    &__navbar {
+        background: rgba($black, 0.8);
+        position: absolute;
+        top: $hh-mobile;
+        left: calc(-100vw);
+        height: calc(100vh - #{$hh-mobile});
+        width: 100vw;
+        transition: ease $a-medium;
 
-    //     @include r(mobile) {
-    //         top: $hh-mobile;
-    //         height: calc(100vh - #{$hh-mobile});
-    //         left: calc(-100vw - 40px);
-    //         width: 100vw;
-    //     }
+        @include r(tablet) {
+            top: $hh-tablet;
+            left: calc(-400px);
+            height: calc(100vh - #{$hh-tablet});
+            width: 400px;
+        }
+    
+        @include r(desktop) {
+            top: $hh-desktop;
+            left: calc(-400px);
+            height: calc(100vh - #{$hh-desktop});
+            width: 400px;
+            opacity: 0;
+        }
+    
+        @include r(ultrawide) {
+            top: $hh-ultrawide;
+            left: calc(-400px);
+            height: calc(100vh - #{$hh-ultrawide});
+            width: 400px;
+            opacity: 0;
+        }
 
-    //     &--nav {
-    //         padding: 0 20px;
+        &--nav {
+            padding: 35px;
+        }
 
-    //         @include r(desktop, ultrawide) {
-    //             padding: 0 35px;
-    //         }
-    //     }
+        &--is-active {
+            left: 0px;
 
-    //     &--is-active {
-    //         left: 0px;
+            @include r(desktop, ultrawide) {
+                opacity: 1;
+            }
+        }
 
-    //         @include r(desktop, ultrawide) {
-    //             opacity: 1;
-    //         }
-    //     }
+        &--links {
+            padding: 0;
+            margin: 0;
+        }
 
-    //     &--links {
-    //         padding: 0;
-    //     }
-
-    //     &--link {
-    //         margin: 10px 0;
-    //         list-style-type: none;
+        &--link {
+            margin-bottom: 10px;
+            list-style-type: none;
         
-    //         a {
-    //             // @include t_menu;
-    //         }
+            a {
+                @include t_menu;
+            }
 
-    //         span {
-    //             // @include t_menu;
+            span {
+                @include t_menu;
+            }
+        }
 
-    //             &:hover {
-    //                 color: $orange;
-    //             }
-    //         }
-    //     }
+        &--subnav {
+            padding-left: 20px;
 
-    //     &--subnav {
-    //         padding-left: 20px;
+            .header__navbar--link {
+                margin: 5px 0;
+            }
+        }
+    }
 
-    //         .header__navbar--link {
-    //             margin: 5px 0;
-    //         }
-    //     }
-    // }
+    &__logo {
+        height: 35px;
 
-    // &__logo {
-    //     &--mobile {
-    //         @include r(desktop, ultrawide) {
-    //             display: none;
-    //         }
+        @include r(tablet) {
+            // height: 40px;
+        }
+    
+        @include r(desktop) {
+            height: 40px;
+        }
+    
+        @include r(ultrawide) {
+            height: 50px;
+        }
 
-    //         padding: 24px 15px 15px;
+        img {
+            height: 100%;
+        }
 
-    //         img {
-    //             height: 15px;
-
-    //             @include r(tablet) {
-    //                 height: 20px;
-    //             }
-    //         }
-    //     }
+        &--mobile {
+            @include r(desktop, ultrawide) {
+                display: none;
+            }
+        }
         
-    //     &--desktop {
-    //         @include r(mobile, tablet) {
-    //             display: none;
-    //         }
-
-    //         padding: 12px 20px 0px;
-
-    //         img {
-    //             height: 25px;
-
-    //             @include r(desktop, ultrawide) {
-    //                 height: 35px;
-    //                 margin-right: 25px;
-    //             }
-    //         }
-    //     }
-    // }
-}
-
-.hamburger {
-    @include hamburger;
-
-    width: 50px;
-    height: calc(#{$hh-mobile} - 40px);
-
-    @include r(tablet) {
-        height: calc(#{$hh-tablet} - 40px);
-    }
-
-    @include r(desktop) {
-        height: calc(#{$hh-desktop} - 40px);
-    }
-
-    @include r(ultrawide) {
-        height: calc(#{$hh-ultrawide} - 40px);
+        &--desktop {
+            @include r(mobile, tablet) {
+                display: none;
+            }
+        }
     }
 }

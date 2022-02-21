@@ -70,12 +70,20 @@ main {
         @include t_a();
     }
 
-    ol li {
-        @include t_li();
+    ol {
+        margin: 0;
+
+        li {
+            @include t_li();
+        }
     }
 
-    ul li {
-        @include t_li();
+    ul {
+        margin: 0;
+
+        li {
+            @include t_li();
+        }
     }
 }
 
