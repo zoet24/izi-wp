@@ -1,3 +1,49 @@
-button {
-    
+.button-wrapper {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button {
+    cursor: pointer;
+    transition: all $a-short;
+    font-size: 16px;
+    font-weight: $f-regular;
+    text-align: center;
+    width: fit-content;
+    min-width: 150px;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 10px auto;
+
+    &--primary {
+        position: relative;
+        top: 0;
+
+        &:hover {
+            top: -10px;
+        }
+    }
+
+    &--secondary {
+        width: 150px;
+
+        &:hover {
+            width: 200px;
+        }
+    }
+
+    &--white {
+        border: 2px solid $white;
+        background: none;
+        color: $white;
+
+        &:hover {
+            border: 2px solid $orange;
+            background: $orange;
+            color: $white;
+        }
+    }
 }

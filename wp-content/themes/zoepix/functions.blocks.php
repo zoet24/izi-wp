@@ -1,6 +1,7 @@
 <?php
 
 // Imports - Blocks
+include("blocks/config/buttons.php");
 include("blocks/config/containers.php");
 include("blocks/config/typography.php");
 
