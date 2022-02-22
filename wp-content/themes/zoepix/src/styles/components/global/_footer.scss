@@ -1,6 +1,70 @@
-$footerHeight: 100px;
-
 .footer {
-    height: $footerHeight;
-    border: black 2px solid;
+    height: $fh-mobile;
+    background: $black;
+    z-index: $z-menu;
+
+    @include r(tablet) {
+        height: $fh-tablet;
+    }
+
+    @include r(desktop) {
+        height: $fh-desktop;
+    }
+
+    @include r(ultrawide) {
+        height: $fh-ultrawide;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        max-width: $cw-ultrawide;
+        margin: 0 auto;
+        padding: 40px;
+
+        @include r(tablet) {
+            // padding: 0 40px;
+        }
+    
+        @include r(desktop) {
+            flex-direction: row;
+            padding: 0 40px;
+        }
+    
+        @include r(ultrawide) {
+            flex-direction: row;
+            padding: 0 40px;
+        }
+    }
+
+    &__subcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        a {
+            @include t_menu();
+        }
+
+        &--icons {
+            display: flex;
+        }
+
+        margin: 5px;
+    }
+
+    &__hr {
+        outline: $white solid 1px;
+        width: 75px;
+        margin: 10px;
+
+        @include r(desktop, ultrawide) {
+            display: none;
+        }
+    }
 }
