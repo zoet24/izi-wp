@@ -1,7 +1,0 @@
-.gallery-fullscreen {
-    &__container {
-        @include containerFullNoGutters();
-
-        // height: calc(100vh - #{$headerHeight}- #{$footerHeight});
-    }
-}
