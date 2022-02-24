@@ -1,4 +1,4 @@
-$hamburgerLineHeight: 4px;
+$hamburgerLineHeight: 2px;
 
 @mixin hamburger() {
     position: relative;
@@ -11,7 +11,7 @@ $hamburgerLineHeight: 4px;
         position: absolute;
         height: $hamburgerLineHeight;
         width: 100%;
-        background: $white;
+        background: $black;
         border-radius: $hamburgerLineHeight;
         opacity: 1;
         left: 0;
@@ -37,7 +37,7 @@ $hamburgerLineHeight: 4px;
 
     &--is-active {
         span {
-            background: $orange;
+            background: $black;
         }
 
         span:nth-child(1) {

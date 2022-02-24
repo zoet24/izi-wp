@@ -1,6 +1,8 @@
 <?php
     $logo_mobile = carbon_get_theme_option( 'header_logo_mobile' );
     $logo_desktop = carbon_get_theme_option( 'header_logo_desktop' );
+
+    $icons = carbon_get_theme_option( 'footer_socials' );
 ?>
 
 <header class="header">
@@ -23,6 +25,16 @@
                     'walker' => new Zoepix_Header_Walker()
                 ]);
             ?>
+            <div class="header__navbar--hr"></div>
+            <?php if ($icons) : ?>
+                <div class="header__navbar--icons">
+                    <?php foreach ($icons as $icon) : ?>
+                        <a class="icon icon--black" target="_blank" href="<?php echo esc_html( $icon['footer_socials_link'] ); ?>">
+                            <i class="<?php echo esc_html( $icon['footer_socials_icon'] ); ?>"></i>
+                        </a>                   
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </nav>
         <?php if ($logo_mobile) : ?>
             <a href="/zoepix/" class="header__logo header__logo--mobile">

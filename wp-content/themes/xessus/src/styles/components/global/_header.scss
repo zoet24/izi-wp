@@ -1,6 +1,7 @@
 .header {
     height: $hh-mobile;
-    background: $black;
+    background: $white;
+    border-bottom: 2px solid $black;
     display: flex;
     align-items: center;
     position: fixed;
@@ -53,73 +54,66 @@
 
         &:hover {
             .hamburger span {
-                background: $orange;
+                background: $black;
             }
+        }
+    
+        @include r(tablet, desktop, ultrawide) {
+            display: none;
         }
     }
 
     .hamburger {
         @include hamburger;
     
-        width: 50px;
-        height: 35px;
-    
-        @include r(tablet) {
-            // height: 40px;
-        }
-    
-        @include r(desktop) {
-            height: 40px;
-        }
-    
-        @include r(ultrawide) {
-            width: 70px;
-            height: 50px;
-        }
+        width: 40px;
+        height: 25px;
     }
 
     &__navbar {
-        background: rgba($black, 0.8);
+        background: $white;
+        border-top: $black solid 2px;
         position: absolute;
-        top: $hh-mobile;
-        left: calc(-100vw);
+        top: calc(-100vh + #{$hh-mobile});
+        left: 0;
         height: calc(100vh - #{$hh-mobile});
         width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
         transition: ease $a-medium;
 
-        @include r(tablet) {
-            top: $hh-tablet;
-            left: calc(-400px);
-            height: calc(100vh - #{$hh-tablet});
-            width: 400px;
-        }
+        // @include r(tablet) {
+        //     top: $hh-tablet;
+        //     left: calc(-400px);
+        //     height: calc(100vh - #{$hh-tablet});
+        //     width: 400px;
+        // }
     
-        @include r(desktop) {
-            top: $hh-desktop;
-            left: calc(-400px);
-            height: calc(100vh - #{$hh-desktop});
-            width: 400px;
-            opacity: 0;
-        }
+        // @include r(desktop) {
+        //     top: $hh-desktop;
+        //     left: calc(-400px);
+        //     height: calc(100vh - #{$hh-desktop});
+        //     width: 400px;
+        // }
     
-        @include r(ultrawide) {
-            top: $hh-ultrawide;
-            left: calc(-400px);
-            height: calc(100vh - #{$hh-ultrawide});
-            width: 400px;
-            opacity: 0;
-        }
+        // @include r(ultrawide) {
+        //     top: $hh-ultrawide;
+        //     left: calc(-400px);
+        //     height: calc(100vh - #{$hh-ultrawide});
+        //     width: 400px;
+        // }
 
         &--nav {
-            padding: 35px;
+            padding: 0 35px;
         }
 
         &--is-active {
-            left: 0px;
-
-            @include r(desktop, ultrawide) {
-                opacity: 1;
-            }
+            top: $hh-mobile;
+            opacity: 1;
         }
 
         &--links {
@@ -146,6 +140,12 @@
             .header__navbar--link {
                 margin: 5px 0;
             }
+        }
+
+        &--hr {
+            outline: $black solid 1px;
+            width: 75px;
+            margin: 10px;
         }
     }
 

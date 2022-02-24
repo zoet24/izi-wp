@@ -11,13 +11,26 @@ a.icon {
     transition: all $a-short ease-in-out;
     cursor: pointer;
 
+    &--black {
+        border: 1px solid $black;
+        background: none;
+        color: $black;
+
+        &:hover {
+            border: 1px solid $black;
+            background: $black;
+            color: $white;
+            transform: $a-scale;
+        }
+    }
+
     &--white {
-        border: 2px solid $white;
+        border: 1px solid $white;
         background: none;
         color: $white;
 
         &:hover {
-            border: 2px solid $orange;
+            border: 1px solid $orange;
             background: $orange;
             color: $white;
         }
