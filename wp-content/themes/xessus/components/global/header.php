@@ -3,6 +3,7 @@
     $logo_desktop = carbon_get_theme_option( 'header_logo_desktop' );
 
     $icons = carbon_get_theme_option( 'footer_socials' );
+    $copyright = carbon_get_theme_option( 'footer_copyright' );
 ?>
 
 <header class="header">
@@ -15,7 +16,7 @@
                 <span></span>
             </div>
         </button>
-        <nav class="header__navbar">
+        <nav class="header__navbar header__navbar--mobile">
             <?php wp_nav_menu([
                     'menu' => 'Main Menu',
                     'menu_class' => 'header__navbar--links',
@@ -35,14 +36,19 @@
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
+            <?php if ($copyright) : ?>
+                <div class="header__navbar--copyright">
+                    <h5><?php echo $copyright; ?></h5>
+                </div>
+            <?php endif; ?>
         </nav>
         <?php if ($logo_mobile) : ?>
-            <a href="/zoepix/" class="header__logo header__logo--mobile">
-                <img src="<?php echo wp_get_attachment_image_url($logo_mobile, 'large'); ?>" alt="Zoepix logo">
+            <a href="/xessus/" class="header__logo header__logo--mobile">
+                <img src="<?php echo wp_get_attachment_image_url($logo_mobile, 'large'); ?>" alt="xessus logo">
             </a>
         <?php endif; ?>
         <?php if ($logo_desktop) : ?>
-            <a href="/zoepix/" class="header__logo header__logo--desktop">
+            <a href="/xessus/" class="header__logo header__logo--desktop">
                 <img src="<?php echo wp_get_attachment_image_url($logo_desktop, 'large'); ?>" alt="Zoepix logo">
             </a>
         <?php endif; ?>

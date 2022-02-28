@@ -220,6 +220,10 @@
     text-decoration: underline;
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
   // @include r(tablet) {
     
   // }
@@ -276,9 +280,46 @@
   // OTHER
   cursor: pointer;
   text-decoration: none;
+  outline: none!important;
+  -webkit-tap-highlight-color: transparent !important;
 
   &:hover {
-    color: $black;
+    font-weight: $f-bold;
+    color: $grey--dark;
+  }
+
+  // @include r(tablet) {
+    
+  // }
+
+  // @include r(desktop) {
+    
+  // }
+
+  // @include r(ultrawide) {
+    
+  // }
+}
+
+@mixin t_menu-sub {
+  margin: 0;
+
+  color: $black;
+  font-size: 1rem;
+  font-family: $f-primary;
+  font-weight: $f-regular;
+  letter-spacing: normal;
+  transition: $a-short;
+
+  // OTHER
+  cursor: pointer;
+  text-decoration: none;
+  outline: none!important;
+  -webkit-tap-highlight-color: transparent !important;
+
+  &:hover {
+    font-weight: $f-bold;
+    color: $grey--dark;
   }
 
   // @include r(tablet) {

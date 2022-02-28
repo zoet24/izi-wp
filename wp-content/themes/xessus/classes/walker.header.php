@@ -20,9 +20,9 @@ class Zoepix_Header_Walker extends Walker_Nav_Menu
     $permalink = $item->url;
     $classes = ['header__navbar--link'];
 
-    if ($args->walker->has_children) $classes[] = 'header__navbar--link--children';
+    if ($args->walker->has_children) $classes[] = 'header__navbar--link--haschildren';
     if ($depth === 0) $classes[] = 'header__navbar--link--top';
-    if (!is_front_page() && ($item->current || $item->current_item_ancestor || $item->current_item_parent)) $classes[] = 'header__navbar--link--current';
+    if (($item->current || $item->current_item_ancestor || $item->current_item_parent)) $classes[] = 'header__navbar--link--current';
     $output .= "<li class='" . implode(' ', $classes) . "' data-depth='" . $depth . "'>";
 
     if ($permalink && $permalink != '#') {
@@ -36,6 +36,10 @@ class Zoepix_Header_Walker extends Walker_Nav_Menu
     if ($description != '' && $depth == 0) {
       $output .= '<small class="header__navbar--description">' . $description . '</small>';
     }
+
+    if ($args->walker->has_children) {
+			$output .= '<i class="fa fa-chevron-right header__navbar--arrow"></i>';
+		}
 
     if ($permalink && $permalink != '#') {
       $output .= '</a>';

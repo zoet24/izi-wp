@@ -2,6 +2,7 @@
     $email = carbon_get_theme_option( 'footer_email' );
     $phone = carbon_get_theme_option( 'footer_phone' );
     $icons = carbon_get_theme_option( 'footer_socials' );
+    $copyright = carbon_get_theme_option( 'footer_copyright' );
 ?>
 
 <footer class="footer">

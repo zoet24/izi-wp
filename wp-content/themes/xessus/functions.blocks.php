@@ -29,6 +29,7 @@ function attach_footer_options() {
         ->add_fields( array(
             Field::make( 'text', 'footer_email', 'Email Address' ),
             Field::make( 'text', 'footer_phone', 'Phone Number' ),
+            Field::make( 'rich_text', 'footer_copyright', 'Copyright' ),
             Field::make( 'complex', 'footer_socials', __( 'Social Media Links' ) )
                 ->set_layout( 'tabbed-horizontal' )
                 ->add_fields( array(

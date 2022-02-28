@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mixins/hamburger */ \"./src/scripts/mixins/hamburger.js\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mixins_hamburger__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://zoepix/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mixins/hamburger */ \"./src/scripts/mixins/hamburger.js\");\n/* harmony import */ var _mixins_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mixins_hamburger__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _mixins_subnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mixins/subnav */ \"./src/scripts/mixins/subnav.js\");\n/* harmony import */ var _mixins_subnav__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mixins_subnav__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack://zoepix/./src/scripts/index.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (() => {
 
 eval("document.addEventListener('click', function (e) {\n  if (!e.target.closest('.hamburger')) return;\n  var hamburger = e.target.closest('.hamburger');\n  var navbar = e.target.closest('.header__container').querySelector('.header__navbar');\n  hamburger.classList[hamburger.matches('.hamburger--is-active') ? 'remove' : 'add']('hamburger--is-active');\n  navbar.classList[navbar.matches('.header__navbar--is-active') ? 'remove' : 'add']('header__navbar--is-active');\n  document.body.classList[document.body.matches('.menu-is-open') ? 'remove' : 'add']('menu-is-open');\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/mixins/hamburger.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/mixins/subnav.js":
+/*!**************************************!*\
+  !*** ./src/scripts/mixins/subnav.js ***!
+  \**************************************/
+/***/ (() => {
+
+eval("document.addEventListener('click', function (e) {\n  if (!e.target.closest('.header__navbar--link--haschildren')) return;\n  var subnav = e.target.closest('.header__navbar--link--haschildren');\n  var subnavArrow = subnav.querySelector('.header__navbar--arrow');\n  var subnavMenu = subnav.querySelector('.header__navbar--subnav');\n  subnavArrow.classList[subnavArrow.matches('.header__navbar--arrow--is-active') ? 'remove' : 'add']('header__navbar--arrow--is-active');\n  subnavMenu.classList[subnavMenu.matches('.header__navbar--subnav--is-active') ? 'remove' : 'add']('header__navbar--subnav--is-active');\n});\n\n//# sourceURL=webpack://zoepix/./src/scripts/mixins/subnav.js?");
 
 /***/ }),
 
