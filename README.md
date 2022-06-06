@@ -1,4 +1,4 @@
-**ZOEPIX BOILERPLATE**
+**IZI PORTFOLIO BOILERPLATE**
 
 *Setting up new site from boilerplate*
 - Clone boilerplate repo in htdocs and rename
@@ -6,7 +6,7 @@
     - git init
     - git add -A
     - git commit -m "Initial commit"
-    - git remote add origin git@github.com:zoet24/rs-photography.git
+    - git remote add origin git@github.com:zoet24/izi-wp.git
     - git branch -M main
     - git push -u origin main
 - Follow steps on https://www.youtube.com/watch?v=OriRDlUbAFg&ab_channel=FounderCopilot to set up new Wordpress site and database
