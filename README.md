@@ -13,6 +13,10 @@
 - Change name of theme folders and style.css, then activate theme in Wordpress
 - Activate Carbon Fields plugin
 
+- If you need to reset the remote use:
+    - $ git remote set-url origin https://git-repo/new-repository.git
+    - $ git remote -v
+
 *Webpack*
 - For instructions on setting up Webpack follow https://dev.to/antonmelnyk/how-to-configure-webpack-from-scratch-for-a-basic-website-46a5
 

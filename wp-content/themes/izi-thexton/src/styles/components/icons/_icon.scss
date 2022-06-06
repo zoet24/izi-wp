@@ -1,38 +1,38 @@
-a.icon {
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 0 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all $a-short ease-in-out;
-    cursor: pointer;
+// a.icon {
+//     font-size: 16px;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     margin: 0 5px;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-decoration: none;
+//     transition: all $a-short ease-in-out;
+//     cursor: pointer;
 
-    &--black {
-        border: 1px solid $black;
-        background: none;
-        color: $black;
+//     &--black {
+//         border: 1px solid $black;
+//         background: none;
+//         color: $black;
 
-        &:hover {
-            border: 1px solid $black;
-            background: $black;
-            color: $white;
-            transform: $a-scale;
-        }
-    }
+//         &:hover {
+//             border: 1px solid $black;
+//             background: $black;
+//             color: $white;
+//             transform: $a-scale;
+//         }
+//     }
 
-    &--white {
-        border: 1px solid $white;
-        background: none;
-        color: $white;
+//     &--white {
+//         border: 1px solid $white;
+//         background: none;
+//         color: $white;
 
-        &:hover {
-            border: 1px solid $orange;
-            background: $orange;
-            color: $white;
-        }
-    }
-}
+//         &:hover {
+//             border: 1px solid $orange;
+//             background: $orange;
+//             color: $white;
+//         }
+//     }
+// }

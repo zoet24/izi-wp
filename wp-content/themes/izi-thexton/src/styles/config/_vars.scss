@@ -1,20 +1,17 @@
 // Imports
-@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 //  Colours
 $white: #ffffff;
-$grey--light: #949494;
-$grey--dark: #282828;
-$black--light: #161616;
+$white--bg: #e1e1e1; // Main background colour
+$blue--text: #2a00ff; // Colour for links
 $black: #000000;
 
-$orange: #ffa500;
-$orange--dark: #d18700;
-
 // Fonts
-$f-primary: 'Brygada 1918', serif;
+$f-primary: 'Lato', sans-serif;
 
 // Font Weights
+$f-skinny: 300;
 $f-regular: 400;
 $f-medium: 500;
 $f-semibold: 600;
@@ -27,18 +24,6 @@ $a-long: 1s;
 
 // Animations
 $a-scale: scale(1.1);
-
-// Header heights
-$hh-mobile: 60px;
-$hh-tablet: 75px;
-$hh-desktop: 100px;
-$hh-ultrawide: 125px;
-
-// Footer heights
-$fh-mobile: auto;
-$fh-tablet: auto;
-$fh-desktop: 100px;
-$fh-ultrawide: 125px;
 
 // Section padding
 $p-mobile: 15px 0;

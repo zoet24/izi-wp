@@ -19,24 +19,8 @@ body {
 }
 
 main {
-    background: $white;
-    margin-top: $hh-mobile;
-    min-height: calc(100vh - #{$hh-mobile} - #{$hh-mobile});
-
-    @include r(tablet) {
-        margin-top: $hh-tablet;
-        min-height: calc(100vh - #{$hh-tablet} - #{$hh-tablet});
-    }
-
-    @include r(desktop) {
-        margin-top: $hh-desktop;
-        min-height: calc(100vh - #{$hh-desktop} - #{$fh-desktop});
-    }
-
-    @include r(ultrawide) {
-        margin-top: $hh-ultrawide;
-        min-height: calc(100vh - #{$hh-ultrawide} - #{$fh-ultrawide});
-    }
+    background: $white--bg;
+    height: 100vh;
 
     h1 {
         @include t_h1();
@@ -89,7 +73,7 @@ main {
 
 section {
     padding: $p-mobile;
-  
+
     @include r(desktop, ultrawide) {
         padding: $p-desktop;
     }

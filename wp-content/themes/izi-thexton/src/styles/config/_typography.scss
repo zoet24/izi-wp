@@ -217,7 +217,8 @@
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    font-style: italic;
+    color: $blue--text;
   }
 
   &:focus-visible {
@@ -252,75 +253,6 @@
   // &:hover {
     
   // }
-
-  // @include r(tablet) {
-    
-  // }
-
-  // @include r(desktop) {
-    
-  // }
-
-  // @include r(ultrawide) {
-    
-  // }
-}
-
-// Custom
-@mixin t_menu {
-  margin: 0;
-
-  color: $black;
-  font-size: 1.25rem;
-  font-family: $f-primary;
-  font-weight: $f-regular;
-  letter-spacing: normal;
-  transition: $a-short;
-
-  // OTHER
-  cursor: pointer;
-  text-decoration: none;
-  outline: none!important;
-  -webkit-tap-highlight-color: transparent !important;
-
-  &:hover {
-    font-weight: $f-bold;
-    color: $grey--dark;
-  }
-
-  // @include r(tablet) {
-    
-  // }
-
-  // @include r(desktop) {
-    
-  // }
-
-  // @include r(ultrawide) {
-    
-  // }
-}
-
-@mixin t_menu-sub {
-  margin: 0;
-
-  color: $black;
-  font-size: 1rem;
-  font-family: $f-primary;
-  font-weight: $f-regular;
-  letter-spacing: normal;
-  transition: $a-short;
-
-  // OTHER
-  cursor: pointer;
-  text-decoration: none;
-  outline: none!important;
-  -webkit-tap-highlight-color: transparent !important;
-
-  &:hover {
-    font-weight: $f-bold;
-    color: $grey--dark;
-  }
 
   // @include r(tablet) {
     

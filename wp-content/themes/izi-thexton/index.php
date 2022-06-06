@@ -1,13 +1,12 @@
 <?php get_header(); ?>
-<?php component('global/header') ?>
-    
+<?php component('global/nav') ?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <main class="zoepix">
+  <main class="izi">
     <?php the_content(); ?>
   </main>
 <?php endwhile; else : ?>
 
 <?php endif; ?>
 
-<?php component('global/footer') ?>
 <?php get_footer(); ?>

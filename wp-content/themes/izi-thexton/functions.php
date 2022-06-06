@@ -7,8 +7,8 @@ include("functions.options.php");
 include("functions.walker.php");
 
 // Classes
-include("classes/walker.footer.php");
-include("classes/walker.header.php");
+// include("classes/walker.footer.php");
+// include("classes/walker.header.php");
 
 // Remove actions
 remove_action('wp_head', 'print_emoji_detection_script', 7);
